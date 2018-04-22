@@ -1,0 +1,89 @@
+body {
+  background: url(../../img/index.jpg);
+  background-position: center top;
+  background-size: auto 120vh;
+  height: 100%; }
+
+.container {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end; }
+  .container .container-nav {
+    width: 50%; }
+  .container .container-ul {
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    font-size: 33px;
+    font-family: OpenSansRegular; }
+    .container .container-ul a {
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+      display: inline-block; }
+      .container .container-ul a::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid #fff;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: all 0.3s ease-in; }
+      .container .container-ul a:hover {
+        transition: all 0.3s;
+        color: #fff; }
+        .container .container-ul a:hover::after {
+          transform: scaleX(1);
+          transition: all 0.3s ease-out; }
+  .container-button {
+    height: 80vh;
+    align-items: center;
+    width: 50%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: OpenSansRegular; }
+    .container-button h2 {
+      font-size: 65px;
+      font-weight: 400;
+      text-align: center; }
+    .container-button a {
+      font-size: 36px;
+      border-radius: 20px;
+      padding: 20px 60px;
+      border: 3px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.4s ease-in-out; }
+      .container-button a:hover {
+        color: #000;
+        background: #fff;
+        border: 3px solid rgba(255, 255, 255, 0); }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+
+@media screen and (min-width: 996px) and (max-width: 1199px) {
+  .container {
+    width: 960px; } }
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  .container {
+    width: 720px; } }
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    width: 520px; } }
