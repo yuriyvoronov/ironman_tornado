@@ -2,7 +2,8 @@ body {
   background: url(../../img/index.jpg);
   background-position: center top;
   background-size: auto 120vh;
-  height: 100%; }
+  height: 100%;
+  margin: 0; }
 
 .container {
   margin: 0 auto;
@@ -12,9 +13,9 @@ body {
   display: -o-flex;
   display: flex;
   justify-content: flex-end; }
-  .container .container-nav {
+  .container-nav {
     width: 50%; }
-  .container .container-ul {
+  .container-ul {
     list-style: none;
     display: -webkit-flex;
     display: -moz-flex;
@@ -24,22 +25,22 @@ body {
     justify-content: space-between;
     font-size: 33px;
     font-family: OpenSansRegular; }
-    .container .container-ul a {
+    .container-ul a {
       text-decoration: none;
       color: #fff;
       transition: all 0.3s;
       display: inline-block; }
-      .container .container-ul a::after {
+      .container-ul a::after {
         content: "";
         display: block;
         border-bottom: 3px solid #fff;
         transform: scaleX(0);
         transform-origin: center;
         transition: all 0.3s ease-in; }
-      .container .container-ul a:hover {
+      .container-ul a:hover {
         transition: all 0.3s;
         color: #fff; }
-        .container .container-ul a:hover::after {
+        .container-ul a:hover::after {
           transform: scaleX(1);
           transition: all 0.3s ease-out; }
   .container-button {
@@ -78,12 +79,65 @@ body {
 
 @media screen and (min-width: 996px) and (max-width: 1199px) {
   .container {
-    width: 960px; } }
+    width: 960px; }
+    .container-button h2 {
+      font-size: 40px; }
+    .container-button a {
+      font-size: 30px; }
+  .container-ul {
+    font-size: 25px; } }
 
 @media screen and (min-width: 768px) and (max-width: 995px) {
   .container {
-    width: 720px; } }
+    width: 720px; }
+    .container-nav {
+      display: none;
+      width: 100vw;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+    .container-ul {
+      flex-direction: column; }
+    .container-button h2 {
+      font-size: 40px; }
+    .container-button a {
+      font-size: 18px;
+      border-radius: 20px;
+      padding: 10px 20px; } }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    background-position: 40% top; }
   .container {
-    width: 520px; } }
+    width: 520px; }
+    .container-nav {
+      display: none;
+      width: 100vw;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+    .container-button h2 {
+      font-size: 40px; }
+    .container-button a {
+      font-size: 18px;
+      border-radius: 20px;
+      padding: 10px 20px; } }
+
+@media screen and (max-width: 575px) {
+  body {
+    background-position: 30% top; }
+  .container {
+    width: 100%; }
+    .container-nav {
+      display: none;
+      width: 100vw;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+    .container-button {
+      justify-content: flex-end;
+      width: 100%;
+      height: 90vh; }
+      .container-button h2 {
+        font-size: 30px; }
+      .container-button a {
+        font-size: 18px;
+        border-radius: 20px;
+        padding: 10px 20px; } }

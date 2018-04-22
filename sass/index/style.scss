@@ -4,6 +4,7 @@ body
     background-position: center top;
     background-size: auto 120vh;
     height: 100%;
+    margin: 0;
 }
 .container
 {
@@ -14,12 +15,12 @@ body
     display: -o-flex;
     display: flex;
     justify-content: flex-end;
-    .container-nav
-    {
-        width: 50%;
+   &-nav
+    { 
+        width: 50%; 
         
     }
-    .container-ul
+    &-ul 
     {  
         list-style: none;
         display: -webkit-flex;
@@ -109,17 +110,122 @@ body
     .container
     {
         width: 960px;
+        &-button
+        {
+            h2
+            {
+                font-size: 40px;
+            }
+            a
+            {
+                font-size: 30px;
+            }
+        }
+    }
+    .container-ul
+    {
+        font-size: 25px; 
     }
 }
 @media screen and (min-width: 768px) and (max-width: 995px) {
     .container
     {
         width: 720px;
+        &-nav
+        {
+            display: none;
+            width: 100vw;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+           
+        }
+        
+        &-ul
+        {
+            flex-direction: column;
+        }
+        &-button
+        {
+            h2
+            {
+                font-size: 40px;
+            }
+            a
+            {
+                font-size: 18px;
+                border-radius: 20px;
+                padding: 10px 20px;    
+            }
+        }
     }
+
+
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
+        body
+{
+    background-position: 40% top;
+}
     .container
     {
         width: 520px;
+        &-nav
+        {
+            display: none;
+            width: 100vw;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+           
+        }
+        &-button
+        {
+            h2
+            {
+                font-size: 40px;
+            }
+            a
+            {
+                font-size: 18px;
+                border-radius: 20px;
+                padding: 10px 20px;    
+            }
+        }
     }    
+
+}
+@media screen and (max-width: 575px) {
+    body
+{
+    background-position: 30% top;
+}
+    .container
+    {
+        width: 100%;
+        &-nav
+        {
+            display: none;
+            width: 100vw;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+           
+        }
+        &-button
+        {
+            justify-content: flex-end;
+            width: 100%;
+            height: 90vh;
+            h2
+            {
+                font-size: 30px;
+            }
+            a
+            {
+                font-size: 18px;
+                border-radius: 20px;
+                padding: 10px 20px;    
+            }
+        }
+    }
+    
+    
 }

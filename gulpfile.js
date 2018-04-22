@@ -2,7 +2,7 @@
  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
- 
+const wiredep = require('gulp-wiredep');
 var gulp = require('gulp'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
@@ -17,6 +17,13 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('bower', function () {
+  gulp.src('./index.html')
+    .pipe(wiredep({
+      directory: "./bower_components"
+    }))
+    .pipe(gulp.dest('./'));
+});
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')

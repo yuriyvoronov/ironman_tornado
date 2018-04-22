@@ -1,0 +1,10 @@
+    $(".bar").click(function(){
+        $(this).toggleClass("enabled");
+        $(".close").toggleClass("enabled");
+        $(".smart-nav").toggleClass("enabled");
+    });
+    $(".close").click(function(){
+        $(this).toggleClass("enabled");
+        $(".bar").toggleClass("enabled");
+        $(".smart-nav").toggleClass("enabled");
+    });
