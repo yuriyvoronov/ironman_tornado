@@ -1,5 +1,5 @@
 body {
-  background: url(../../img/index.jpg);
+  background: url(../../img/index.jpg) #14100d no-repeat;
   background-position: center top;
   background-size: auto 120vh;
   height: 100%;

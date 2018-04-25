@@ -10,15 +10,36 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-clean-css');
  
 gulp.task('html', function () {
-    return gulp.src('app/*.html')
+    return gulp.src('*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('images',function(){
+	gulp.src('img/**/*.jpg')
+		.pipe(gulp.dest('dist/img'));
+	gulp.src('img/**/*.png')
+		.pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('fonts',function(){
+	gulp.src('fonts/**/*.eot)')
+		.pipe(gulp.dest('dist/fonts'));
+	gulp.src('fonts/**/*.ttf)')
+		.pipe(gulp.dest('dist/fonts'));
+	gulp.src('fonts/**/*.woff)')
+		.pipe(gulp.dest('dist/fonts'));
+});
+gulp.task('build', [
+    'html',
+    'images',
+    'fonts'
+    
+]);
 gulp.task('bower', function () {
-  gulp.src('./index.html')
+  gulp.src('./*.html')
     .pipe(wiredep({
       directory: "./bower_components"
     }))
